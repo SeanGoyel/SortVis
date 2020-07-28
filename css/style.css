@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+
+}
+
+header {
+  background-color: steelblue;
+  
+}
+
+#title {
+
+  margin: 0px;
+  padding: 10px 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.options-bar, .algorithm-options{
+  background: darkblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-bar-items, .algorithm-options-items {
+  margin: 5px 10px;
+
+
+}
+
+.slider{}

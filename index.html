@@ -8,8 +8,62 @@
 
   <title>SortVis</title>
 </head>
-
 <body>
+
+<header>
+  <div>
+
+    <h1 id="title">Algorithm Visualizer</h1>
+  </div>
+
+  <div class="options-bar">
+
+    <div class="options-bar-items">
+      <h2 class="slider-label">Size</h2>
+    </div>
+    <div class="options-bar-items">
+      <input type="range" min="1" max="10" value="5" class="slider" id="size">
+    </div>
+    <div class="options-bar-items">
+      <h2 class="slider-label">Algorithm Speed</h2>
+    </div>
+    <div class="options-bar-items">
+      <input type="range" min="1" max="10" value="5" class="slider" id="speed">
+    </div>
+
+  </div>
+
+  <div class="algorithm-options">
+
+    <div class="algorithm-options-items">
+      <button type="button" onclick="runAlgorithm(this)">Quick Sort</button>
+    </div>
+    <div class="algorithm-options-items">
+      <button type="button" onclick="runAlgorithm(this)">Bubble Sort</button>
+    </div>
+    <div class="algorithm-options-items">
+      <button type="button" onclick="runAlgorithm(this)">Merge Sort</button>
+    </div>
+    <div class="algorithm-options-items">
+      <button type="button" onclick="runAlgorithm(this)">Selection Sort</button>
+    </div>
+    <div class="algorithm-options-items">
+      <button type="button" onclick="runAlgorithm(this)">Insertion Sort</button>
+    </div>
+
+  </div>
+
+
+</header>
+
+<main></main>
+
+
+<script src="js/main.js"">
+
+</script>
+
+
 </body>
 
 </html>
