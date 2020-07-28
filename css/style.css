@@ -5,7 +5,7 @@ body {
 
 header {
   background-color: steelblue;
-  
+
 }
 
 #title {
@@ -32,5 +32,23 @@ header {
 
 
 }
+
+#bars-container {
+  height: 515px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+
+}
+
+.bar {
+  margin: 5px 1px;
+  background-color: green;
+  width: 150px;
+}
+
+
+
 
 .slider{}
