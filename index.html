@@ -22,14 +22,15 @@
       <h2 class="slider-label">Size</h2>
     </div>
     <div class="options-bar-items">
-      <input type="range" min="1" max="10" value="5" class="slider" id="size"
+      <input type="range" min="1" max="14" value="8" class="slider" id="size"
       oninput="getArrayFromSlider(this)">
     </div>
     <div class="options-bar-items">
       <h2 class="slider-label">Algorithm Speed</h2>
     </div>
     <div class="options-bar-items">
-      <input type="range" min="1" max="10" value="5" class="slider" id="speed">
+      <input type="range" min="1" max="4" value="3" class="slider" id="speed"
+      step=".2"oninput="getSpeedFromSlider(this)">
     </div>
 
   </div>
@@ -70,10 +71,9 @@
 
 </main>
 
-
-<script src="js/main.js"">
-
-</script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/Visualizer.js"></script>
+<script type="text/javascript" src="js/InsertionSort.js"></script>
 
 
 </body>

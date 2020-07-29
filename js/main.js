@@ -1,58 +1,46 @@
-var sizeSlider = document.getElementById("size");
-var speedSlider = document.getElementById("speed");
 var buttonsDisabled = false;
-var arraySize = 8; //defualt size
+var arraySizeMultiple = 8; //defualt size
+var arraySize = arraySizeMultiple * 10;
 var bars;
+var barHeights = new Array();
 
+var currentDelay= 0;
+
+// TODO: Current Bar color
+// done bars
+// spliting color
 genrateArray();
 
 function getArrayFromSlider(input) {
   if(buttonsDisabled) {
     return;
   }
-  arraySize = input.value;
+  arraySizeMultiple = input.value;
+  arraySize = arraySizeMultiple * 10;
   genrateArray();
+  currentDelay= 0;
+
 }
 
 
 function genrateArray() {
   document.getElementById('bars-container').innerHTML = ""
 
-  for(let i = 0; i < arraySize * 10; i++) {
+  for(let i = 0; i < arraySize; i++) {
     let div = document.createElement('div');
     let randomNumber = Math.ceil(Math.random()*100);
     div.setAttribute("class","bar");
 
-    div.style.height= (randomNumber) * 5 + "px " ;
-
-    if(i === 0) {
-
-      div.style.background= "red";
-    }
+    let barHeight = (randomNumber) * 5;
+    div.style.height= barHeight + "px";
+    barHeights[i]= (barHeight);
 
     document.getElementById('bars-container').appendChild(div);
     bars = document.getElementsByClassName("bar");
+
   }
 
-
-
 }
-
-
-function swap(bar1Pos,bar2Pos) {
-
-  let temp1 = bars[bar1Pos].cloneNode(true);
-  let temp2 = bars[bar2Pos].cloneNode(true);
-
-  bars[bar1Pos].parentNode.replaceChild(temp2, bars[bar1Pos]);
-  bars[bar2Pos].parentNode.replaceChild(temp1, bars[bar2Pos]);
-
-  let barTemp = bars[bar1Pos];
-  bars[bar1Pos] = bar2Pos;
-  bar2Pos[bar1Pos] = barTemp;
-
-}
-
 
 
 function runAlgorithm(button) {
