@@ -33,7 +33,7 @@ function genrateArray() {
 
     let barHeight = (randomNumber) * 5;
     div.style.height= barHeight + "px";
-    barHeights[i]= (barHeight);
+    barHeights[i] = (barHeight);
 
     document.getElementById('bars-container').appendChild(div);
     bars = document.getElementsByClassName("bar");
