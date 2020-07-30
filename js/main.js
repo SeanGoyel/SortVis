@@ -50,7 +50,7 @@ if(buttonsDisabled) {
 }
   switch(button.innerHTML) {
 
-    case "Quick Sort": swap(0,7);
+    case "Quick Sort": quickSortAlgorithm();
       break;
 
     case "Bubble Sort": bubbleSort();
