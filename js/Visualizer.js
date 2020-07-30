@@ -23,7 +23,7 @@ function updateUnprocessedBar(bar, height) {
     if (!isNaN(height)) {
       bar.style.height = height + "px";
     }
-    bar.style.background = "steelblue";   // sameColor As Origianl Bar!!! - Fix
+    bar.style.background = "steelblue";   // sameColor As Original Bar!!! - Fix
   }, currentDelay += speed);
 
 }

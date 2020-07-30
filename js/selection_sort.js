@@ -37,21 +37,6 @@ function selectionSort() {
     }
     updateProcessedBar(bars[i], barHeights[i]);
 
-
-
-
-
-
-
-
-
-
   }
-
-
-
-  console.log(barHeights);
-
-
 
 }
