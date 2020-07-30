@@ -1,6 +1,7 @@
 var buttonsDisabled = false;
 var arraySizeMultiple = 8; //defualt size
-var arraySize = arraySizeMultiple * 10;
+// var arraySize = arraySizeMultiple * 10;
+var arraySize =10;
 var bars;
 var barHeights = new Array();
 
@@ -55,7 +56,7 @@ if(buttonsDisabled) {
     case "Bubble Sort": bubbleSort();
       break;
 
-    case "Merge Sort": mergSort();
+    case "Merge Sort": mergeSortAlgorithm();
       break;
 
     case "Selection Sort": selectionSort();
