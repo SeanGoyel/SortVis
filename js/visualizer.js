@@ -1,13 +1,13 @@
 var currentDelay = 0;
 var speed = 600;
-
+var defualtBarColor = getComputedStyle(bars[0]).backgroundColor;
 
 // TODO: Not functional - invert speed values
 function getSpeedFromSlider(input) {
   if (buttonsDisabled) {
     return;
   }
-  speed =  1000 - input.value;
+  speed = 1000 - input.value;
   console.log(speed);
 
 }
@@ -23,7 +23,7 @@ function updateUnprocessedBar(bar, height) {
     if (!isNaN(height)) {
       bar.style.height = height + "px";
     }
-    bar.style.background = "steelblue";   // sameColor As Original Bar!!! - Fix
+    bar.style.background = defualtBarColor;
   }, currentDelay += speed);
 
 }
