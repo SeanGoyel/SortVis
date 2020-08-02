@@ -1,12 +1,10 @@
 var currentDelay = 0;
-var speed = 600;
+var speed = 100;
 var defualtBarColor = getComputedStyle(bars[0]).background;
 var isCompleteFunction;
 
-// TODO: Not functional - invert speed values
 function getSpeedFromSlider(input) {
   speed = 1000 - input.value;
-  console.log(speed);
 }
 
 function updateUnprocessedBar(bar, height) {
@@ -75,7 +73,7 @@ function algorithmIsComplete() {
 function resetToDefaultColor() {
 
   for (let i = 0; i < bars.length; i++) {
-    updateUnprocessedBar(bars[i]);
-    simultaneousEvents();
+      bars[i].style.background = defualtBarColor;
+
   }
 }

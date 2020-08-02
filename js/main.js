@@ -1,10 +1,6 @@
 
-var arraySizeMultiple = 8; //defualt size
-// var arraySize = arraySizeMultiple * 10;
-var currentBars;
-var currentBarHeights;
-var currentAlgorithmIsComplete;
-var arraySize = 10;
+var arraySizeMultiple;
+var arraySize = 50;
 var bars;
 var barHeights = new Array();
 var speedSlider = document.getElementById("speed");
@@ -15,6 +11,7 @@ generateArray();
 
 function getArrayFromSlider(input) {
   arraySizeMultiple = input.value;
+  console.log(arraySizeMultiple);
   arraySize = arraySizeMultiple * 10;
   generateArray();
   currentDelay = 0;
@@ -26,10 +23,10 @@ function generateArray() {
 
   for (let i = 0; i < arraySize; i++) {
     let div = document.createElement('div');
-    let randomNumber = Math.ceil(Math.random() * 100);
+    let randomNumber = Math.ceil(Math.random() * 500);
     div.setAttribute("class", "bar");
 
-    let barHeight = (randomNumber) * 5;
+    let barHeight = (randomNumber);
     div.style.height = barHeight + "px";
     barHeights[i] = (barHeight);
 
