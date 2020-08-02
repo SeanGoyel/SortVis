@@ -11,7 +11,6 @@ generateArray();
 
 function getArrayFromSlider(input) {
   arraySizeMultiple = input.value;
-  console.log(arraySizeMultiple);
   arraySize = arraySizeMultiple * 10;
   generateArray();
   currentDelay = 0;

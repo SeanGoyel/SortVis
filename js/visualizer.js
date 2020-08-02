@@ -4,7 +4,38 @@ var defualtBarColor = getComputedStyle(bars[0]).background;
 var isCompleteFunction;
 
 function getSpeedFromSlider(input) {
-  speed = 1000 - input.value;
+
+
+  switch (input.value) {
+    case "0":
+      speed = 2000;
+      break;
+
+    case "1":
+      speed = 1000;
+      break;
+
+    case "2":
+      speed = 500;
+      break;
+
+    case "3":
+      speed = 100;
+      break;
+
+    case "4":
+      speed = 50;
+      break;
+
+    case "5":
+      speed = 10;
+      break;
+
+    case "6":
+      speed = 1;
+      break;
+
+  }
 }
 
 function updateUnprocessedBar(bar, height) {
@@ -66,14 +97,14 @@ function simultaneousEvents() {
 
 function algorithmIsComplete() {
   isCompleteFunction = setTimeout(function() {
-  enableButtons();
-}, currentDelay += speed);
+    enableButtons();
+  }, currentDelay += speed);
 }
 
 function resetToDefaultColor() {
 
   for (let i = 0; i < bars.length; i++) {
-      bars[i].style.background = defualtBarColor;
+    bars[i].style.background = defualtBarColor;
 
   }
 }
