@@ -1,6 +1,6 @@
 var currentDelay = 0;
 var speed = 600;
-var defualtBarColor = getComputedStyle(bars[0]).backgroundColor;
+var defualtBarColor = getComputedStyle(bars[0]).background;
 var isCompleteFunction;
 
 // TODO: Not functional - invert speed values
@@ -25,7 +25,7 @@ function updateProcessedBar(bar, height) {
     if (!isNaN(height)) {
       bar.style.height = height + "px";
     }
-    bar.style.background = "green";
+    bar.style.background = "#11d411";
   }, currentDelay += speed);
 }
 
@@ -35,7 +35,7 @@ function updateCurrentBar(bar, height) {
     if (!isNaN(height)) {
       bar.style.height = height + "px";
     }
-    bar.style.background = "red";
+    bar.style.background = "#f80040";
   }, currentDelay += speed);
 
 }

@@ -97,12 +97,14 @@ h2 {
 
 .disabled-slider {
   -webkit-appearance: none;
+  cursor:default;
   appearance: none;
   width: 100%;
   height: 5px;
   background: #300C41;
   outline: none;
   -webkit-transition: .2s;
+
 
 }
 
@@ -148,7 +150,7 @@ h2 {
   	border-radius:28px;
   	border:1px solid #640D42;
   	display:inline-block;
-  	cursor:pointer;
+  	cursor:default;
   	color: #f1f1f2;
   	font-size:15px;
   	padding:5px 10px;
@@ -162,7 +164,7 @@ h2 {
   	border-radius:28px;
   	border:1px solid #640D42;
   	display:inline-block;
-  	cursor:pointer;
+  	cursor:default;
   	color: #f1f1f2;
   	font-size:15px;
   	padding:5px 10px;
@@ -181,6 +183,6 @@ h2 {
 
 .bar {
   margin: 5px 1px;
-  background-color: steelblue;
+  background: DeepSkyBlue;
   width: 150px;
 }
