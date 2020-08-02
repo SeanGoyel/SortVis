@@ -1,4 +1,6 @@
 function insertionSort() {
+  currentDelay = 0;
+  resetToDefaultColor();
   for (let i = 0; i < arraySize; i++) {
 
     updateCurrentBar(bars[i]);
@@ -7,28 +9,28 @@ function insertionSort() {
     let j = i - 1;
 
     while (j >= 0 && barHeights[j] >
-        currentHeight) {
+      currentHeight) {
 
       updateComparisonBar(bars[j]);
 
-      barHeights[j+1] = barHeights[j];
+      barHeights[j + 1] = barHeights[j];
 
-      updateCurrentBar(bars[j],currentHeight);
+      updateCurrentBar(bars[j], currentHeight);
       simultaneousEvents();
-      updateComparisonBar(bars[j+1],barHeights[j]);
+      updateComparisonBar(bars[j + 1], barHeights[j]);
 
-      updateProcessedBar(bars[j+1],barHeights[j]);
+      updateProcessedBar(bars[j + 1], barHeights[j]);
 
       j--;
     }
 
-    if(j>=0) updateComparisonBar(bars[j]);
+    if (j >= 0) updateComparisonBar(bars[j]);
 
+    barHeights[j + 1] = currentHeight;
 
-    barHeights[j+1] = currentHeight;
+    if (j >= 0) updateProcessedBar(bars[j]);
 
-    if(j>=0) updateProcessedBar(bars[j]);
-
-    updateProcessedBar(bars[j+1],currentHeight);
+    updateProcessedBar(bars[j + 1], currentHeight);
   }
+  algorithmIsComplete();
 }

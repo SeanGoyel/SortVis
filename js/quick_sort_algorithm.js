@@ -1,5 +1,8 @@
 function quickSortAlgorithm() {
+  currentDelay = 0;
+  resetToDefaultColor();
   quickSort(0, arraySize - 1);
+  algorithmIsComplete();
 }
 
 function quickSort(low, high) {
@@ -9,13 +12,13 @@ function quickSort(low, high) {
 
 
   quickSort(low, piv - 1);
-  for (let p = 0; p <= piv && p < arraySize ; p++) {
+  for (let p = 0; p <= piv && p < arraySize; p++) {
     updateProcessedBar(bars[p]);
     simultaneousEvents();
   }
   quickSort(piv + 1, high);
 
-  for (let p = piv+1; p <= high+1 && p < arraySize; p++) {
+  for (let p = piv + 1; p <= high + 1 && p < arraySize; p++) {
     updateProcessedBar(bars[p]);
     simultaneousEvents();
   }
@@ -37,9 +40,9 @@ function partition(low, high) {
 
     if (barHeights[j] < piv) {
 
-      updateCurrentBar(bars[j],barHeights[i]);
+      updateCurrentBar(bars[j], barHeights[i]);
       simultaneousEvents();
-      updateCurrentBar(bars[i],barHeights[j]);
+      updateCurrentBar(bars[i], barHeights[j]);
 
       updateUnprocessedBar(bars[j]);
       simultaneousEvents();

@@ -1,4 +1,6 @@
 function selectionSort() {
+  currentDelay = 0;
+  resetToDefaultColor();
 
   for (let i = 0; i < arraySize; i++) {
     updateCurrentBar(bars[i]);
@@ -31,12 +33,13 @@ function selectionSort() {
     updateCurrentBar(bars[minIndex], barHeights[minIndex]);
 
 
-    if(minIndex > i){
+    if (minIndex > i) {
       updateUnprocessedBar(bars[minIndex], barHeights[minIndex]);
       simultaneousEvents();
     }
     updateProcessedBar(bars[i], barHeights[i]);
 
   }
+  algorithmIsComplete();
 
 }

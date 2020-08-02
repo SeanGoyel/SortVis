@@ -1,80 +1,105 @@
-var buttonsDisabled = false;
+
 var arraySizeMultiple = 8; //defualt size
 // var arraySize = arraySizeMultiple * 10;
 var currentBars;
 var currentBarHeights;
-var arraySize =10;
+var currentAlgorithmIsComplete;
+var arraySize = 10;
 var bars;
 var barHeights = new Array();
+var speedSlider = document.getElementById("speed");
+var buttons = document.getElementsByTagName("button");
+var currentAlgorithm;
 
-var currentDelay= 0;
-
-// TODO: Current Bar color
-// done bars
-// spliting color
 generateArray();
 
 function getArrayFromSlider(input) {
-  if(buttonsDisabled) {
-    return;
-  }
   arraySizeMultiple = input.value;
   arraySize = arraySizeMultiple * 10;
   generateArray();
-  currentDelay= 0;
-
+  currentDelay = 0;
 }
 
 
 function generateArray() {
   document.getElementById('bars-container').innerHTML = ""
 
-  for(let i = 0; i < arraySize; i++) {
+  for (let i = 0; i < arraySize; i++) {
     let div = document.createElement('div');
-    let randomNumber = Math.ceil(Math.random()*100);
-    div.setAttribute("class","bar");
+    let randomNumber = Math.ceil(Math.random() * 100);
+    div.setAttribute("class", "bar");
 
     let barHeight = (randomNumber) * 5;
-    div.style.height= barHeight + "px";
+    div.style.height = barHeight + "px";
     barHeights[i] = (barHeight);
 
     document.getElementById('bars-container').appendChild(div);
   }
-  currentBars = document.getElementById('bars-container').innerHTML;
-  currentBarHeights = barHeights;
   bars = document.getElementsByClassName("bar");
+  enableButtons();
 
+}
+
+
+function disableButtons() {
+  speedSlider.disabled = true;
+  speedSlider.className = "disabled-slider";
+
+  for (let i = 0; i < buttons.length; i++) {
+    let currentButton = buttons[i];
+    if (!(currentButton.innerHTML == "Generate New Array")) {
+      currentButton.disabled = true;
+      currentButton.className = "disabled-button";
+      if (currentButton.innerHTML == currentAlgorithm) {
+        currentButton.className = "selected-button"
+      }
+    }
+  }
+}
+
+function enableButtons() {
+speedSlider.disabled = false;
+speedSlider.className = "slider";
+
+  for (let i = 0; i < buttons.length; i++) {
+    if (!(buttons[i].innerHTML == "Generate New Array")) {
+      buttons[i].disabled = false;
+      buttons[i].className = "button";
+    }
+  }
 }
 
 
 function runAlgorithm(button) {
+  currentAlgorithm = button.innerHTML;
+  clearTimeout(isCompleteFunction);
+  disableButtons();
 
-  document.getElementById('bars-container').innerHTML = "";
-  document.getElementById('bars-container').innerHTML = currentBars;
-  barHeights = currentBarHeights;
+  switch (currentAlgorithm) {
 
-  bars = document.getElementsByClassName("bar");
-
-
-if(buttonsDisabled) {
-  return;
-}
-  switch(button.innerHTML) {
-
-    case "Quick Sort": quickSortAlgorithm();
+    case "Quick Sort":
+      quickSortAlgorithm();
       break;
 
-    case "Bubble Sort": bubbleSort();
+    case "Bubble Sort":
+      bubbleSort();
       break;
 
-    case "Merge Sort": mergeSortAlgorithm();
+    case "Merge Sort":
+      mergeSortAlgorithm();
       break;
 
-    case "Selection Sort": selectionSort();
+    case "Selection Sort":
+      selectionSort();
       break;
 
-    case "Insertion Sort": insertionSort();
+    case "Insertion Sort":
+      insertionSort();
       break;
   }
+
+
+
+
 
 }

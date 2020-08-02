@@ -1,20 +1,12 @@
 var currentDelay = 0;
 var speed = 600;
 var defualtBarColor = getComputedStyle(bars[0]).backgroundColor;
+var isCompleteFunction;
 
 // TODO: Not functional - invert speed values
 function getSpeedFromSlider(input) {
-  if (buttonsDisabled) {
-    return;
-  }
   speed = 1000 - input.value;
   console.log(speed);
-
-}
-
-
-function disableSpeedSlider() {
-  document.getElementById("speed").disable = true;
 }
 
 function updateUnprocessedBar(bar, height) {
@@ -25,7 +17,6 @@ function updateUnprocessedBar(bar, height) {
     }
     bar.style.background = defualtBarColor;
   }, currentDelay += speed);
-
 }
 
 function updateProcessedBar(bar, height) {
@@ -36,7 +27,6 @@ function updateProcessedBar(bar, height) {
     }
     bar.style.background = "green";
   }, currentDelay += speed);
-
 }
 
 function updateCurrentBar(bar, height) {
@@ -74,5 +64,18 @@ function updateMarkedBar(bar, height) {
 
 function simultaneousEvents() {
   currentDelay -= speed;
+}
 
+function algorithmIsComplete() {
+  isCompleteFunction = setTimeout(function() {
+  enableButtons();
+}, currentDelay += speed);
+}
+
+function resetToDefaultColor() {
+
+  for (let i = 0; i < bars.length; i++) {
+    updateUnprocessedBar(bars[i]);
+    simultaneousEvents();
+  }
 }
