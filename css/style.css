@@ -12,7 +12,6 @@ h2 {
   font-size: 19px;
 }
 
-
 #title {
   margin: 0px 0px;
   padding: 0px 0px;
@@ -21,7 +20,7 @@ h2 {
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 1.4em;
+  font-size: 1.5em;
   flex-direction: column;
 }
 
@@ -39,15 +38,12 @@ h2 {
 }
 
 #top-line, #bottom-line {
-  background: linear-gradient(to bottom, #a8193e,#150941);
-  height: 10px;
+  background-color: #3C0D41;
+  height: 7px;
   margin-left: calc(50% - 50vw);
   width: 100vw;
 
-}
 
-#bottom-line {
-  background: linear-gradient(to top, #a8193e,#150941);
 }
 
 
@@ -56,6 +52,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .options-bar-items, .algorithm-options-items{
@@ -111,7 +108,7 @@ h2 {
 
 .button,.generate-array {
   margin-bottom: 10px;
-	background-color:#5D0E43;
+	background-color:#8B0F42;
 	border-radius:28px;
 	border:1px solid #640D42;
 	display:inline-block;
