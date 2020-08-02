@@ -1,45 +1,140 @@
 body {
   font-family: sans-serif;
-
+  background-color: #150941;
 }
 
-header {
-  background-color: steelblue;
-
+h1{
+  padding-top: 0px 0px;;
+  margin: 0px 0px;
 }
+
+h2 {
+  font-size: 19px;
+}
+
 
 #title {
-
-  margin: 0px;
-  padding: 10px 10px;
-  color: white;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  color: #f1f1f2;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.4em;
+  flex-direction: column;
+}
+
+
+#titleCapitalLetters {
+  color: #f80040;
+  font-weight: 600;
+}
+
+#titleDescription {
+  font-size: 13px;
+  margin: 0px 0px;
+  padding-bottom: 10px;
+  color: #f1f1f2;
+}
+
+#top-line {
+  background: linear-gradient(to bottom, #5D0E43,#150941);
+  color: white;
+  height: 13px;
+  width: 100vw;
+}
+
+#bottom-line {
+  background: linear-gradient(to top, #5D0E43,#150941);
+  color: white;
+  height: 13px;
+  width: 100vw;
 }
 
 
 .options-bar, .algorithm-options{
-  background: darkblue;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.options-bar-items, .algorithm-options-items {
-  margin: 5px 10px;
-
-
+.options-bar-items, .algorithm-options-items{
+  margin: 2px 10px;
+  color: #f1f1f2;
 }
+
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #5D0E43,#d10f41);
+  outline: none;
+  -webkit-transition: .2s;
+}
+
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d10f41;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d10f41;
+  cursor: pointer;
+}
+
+
+
+.button,.generate-array {
+  margin-bottom: 10px;
+	background-color:#5D0E43;
+	border-radius:28px;
+	border:1px solid #640D42;
+	display:inline-block;
+	cursor:pointer;
+	color: #f1f1f2;
+	font-size:15px;
+	padding:5px 10px;
+	text-decoration:none;
+}
+
+.button:hover,.generate-array:hover {
+	background-color:#890F42;
+}
+
+.button:active,.generate-array:active {
+	position:relative;
+  background-color: #f80040;
+	top:1px;
+}
+
+.button:focus {
+    outline: none;
+    background-color: #f80040;
+}
+
+.generate-array:focus {
+  outline: none;
+}
+
 
 #bars-container {
   height: 515px;
-  background-color: lightblue;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-
 }
 
 .bar {
@@ -47,8 +142,3 @@ header {
   background-color: steelblue;
   width: 150px;
 }
-
-
-
-
-.slider{}
