@@ -5,13 +5,13 @@ A passion project I have created fuelled by my passion for sorting algorithms. T
 
 
 ### Functionality:
-Quick sort
-Merge sort
-Selection sort
-Insertion sort
-Bubble sort
-Visualizes algorithm in a comprehensible manner
-Coded using the separation of concerns design principle
+- Quick sort
+- Merge sort
+- Selection sort
+- Insertion sort
+- Bubble sort
+- Visualizes algorithm in a comprehensible manner
+- Coded using the separation of concerns design principle
 
 ![Bubble Sort Example](images/bubble_sort_example.gif)
 
