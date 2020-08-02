@@ -1,4 +1,4 @@
-# SortVis ![SortVisLogo](images/SortVisLogo.png)
+# ![SortVisLogo](images/SortVisLogo.png)
 ## Sorting Algorithm Visualizer
 
 A passion project I have created fuelled by my passion for sorting algorithms. This project offers the ability to watch an algorithm at a fraction of its speed to learn about the facilitating operations taking place or it can be sped up to see the power of sorting algorithms.
