@@ -39,15 +39,15 @@ h2 {
 }
 
 #top-line, #bottom-line {
-  background: linear-gradient(to bottom, #5D0E43,#150941);
-  height: 13px;
+  background: linear-gradient(to bottom, #a8193e,#150941);
+  height: 10px;
   margin-left: calc(50% - 50vw);
   width: 100vw;
 
 }
 
 #bottom-line {
-  background: linear-gradient(to top, #5D0E43,#150941);
+  background: linear-gradient(to top, #a8193e,#150941);
 }
 
 
