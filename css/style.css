@@ -42,12 +42,10 @@ h2 {
   height: 7px;
   margin-left: calc(50% - 50vw);
   width: 100vw;
-
-
 }
 
 
-.options-bar, .algorithm-options{
+.options-bar, .algorithm-options, .option-grouping{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +53,10 @@ h2 {
   flex-direction: row;
 }
 
+
+.option-grouping {
+  flex-wrap: nowrap;
+}
 .options-bar-items, .algorithm-options-items{
   margin: 2px 10px;
   color: #f1f1f2;

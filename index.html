@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="author" content="Sean Goyel">
   <link rel="stylesheet" href="css/style.css">
@@ -28,21 +28,25 @@
 
 
     <div class="options-bar">
+
+      <div class="option-grouping">
+        <div class="options-bar-items">
+          <h2 class="slider-label">Size</h2>
+        </div>
+        <div class="options-bar-items">
+          <input type="range" min="1" max="13" value="5" class="slider" id="size" oninput="getArrayFromSlider(this)">
+        </div>
+      </div>
+
+      <div class="option-grouping">
+        <div class="options-bar-items">
+          <h2 class="slider-label">Algorithm Speed</h2>
+        </div>
+        <div class="options-bar-items">
+          <input type="range" min="0" max="6" step="1" value="3" class="slider" id="speed" oninput="getSpeedFromSlider(this)">
+        </div>
+      </div>
       
-      <div class="options-bar-items">
-        <h2 class="slider-label">Size</h2>
-      </div>
-      <div class="options-bar-items">
-        <input type="range" min="1" max="13" value="5" class="slider" id="size" oninput="getArrayFromSlider(this)">
-      </div>
-      <div class="options-bar-items">
-        <h2 class="slider-label">Algorithm Speed</h2>
-      </div>
-      <div class="options-bar-items">
-        <input type="range" min="0" max="6" step="1" value="3" class="slider" id="speed" oninput="getSpeedFromSlider(this)">
-      </div>
-
-
     </div>
 
     <div class="algorithm-options">
